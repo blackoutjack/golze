@@ -8,21 +8,18 @@ Go's built-in dataflow analysis engine.
 ```
 # Clone/build the repo
 git clone https://github.com/blackoutjack/golze.git
-cd golze && go build
+cd golze
 
-# Install the test framework
-python -m venv ./.venv/golze
-. .venv/golze/bin/activate
-pip install -r requirements.txt
-
-# Run the tests
-python -m test
+# Install and run the test framework
+make test
 ```
 
 ## Current support
 
 This is a work in progress. Only the following endpoint registration methods are supported:
-- gorilla/mux.HandleFunc
-Parameter discovery is based on observation of the following methods.
-- encoding/json.Decoder.Decode
+- `gorilla/mux.HandleFunc`
+
+Parameter discovery is based on observation of the following methods:
+- `encoding/json.Decoder.Decode`
+
 Stay tuned for more.
